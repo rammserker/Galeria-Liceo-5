@@ -23,4 +23,4 @@ const estado = {
     imgs: []
 },
     mainel = document.querySelector('main'),
-    imgels = main.querySelector('figure');
+    imgels = mainel.querySelector('figure');

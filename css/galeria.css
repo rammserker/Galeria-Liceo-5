@@ -31,7 +31,7 @@ body {
     margin: 0 auto;
     border-radius: 6px;
     
-    background: #fff;
+    background: #fff radial-gradient(#fff, #ddd);
     box-shadow: 0 0 6px #000;
     
     font-family: sans-serif;
@@ -41,12 +41,37 @@ header, footer {
     padding: .5rem 1rem;
 }
 
-h1 {
-    font-size: 4vmin;
-    text-align: center;
-    vertical-align: center;
+header {
+    height: 20vmin;
+    /*
+    background:
+        #fff
+        url("../img/logo_liceo5.png")
+        5vmin center no-repeat,
+        linear-gradient(#ccc, #fff);
+    
+    background-size: 18vmin;
+    */
+    
+    background:
+        url("../img/logo_liceo5.png") no-repeat 4vmin center,
+        linear-gradient(#ccc, #fff);
+    
+    background-size: 18vmin;
+    
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    
+    box-shadow: 0 1px 6px #000;
 }
 
+h1 {
+    font-size: 4vmin;
+    text-align: right;
+    text-shadow: 0 0 4px #fff;
+}
+
+/*
 h1::before {
     content: "";
     
@@ -59,6 +84,7 @@ h1::before {
     background-repeat: no-repeat;
     background-size: 100%;
 }
+*/
 
 main {
     display: flex;
@@ -112,11 +138,14 @@ figcaption p {
     flex-direction: column;
     
     width: min-content;
+    max-width: 100%;
     margin: 1rem auto;
     padding: 2rem;
     
-    border: solid 3px #666;
+    border: solid 3px #0301d9;
     border-radius: 6px;
+    background: linear-gradient(-45deg, #ddd, #eee);
+    box-shadow: 0 0 6px red;
 }
 
 .upload input:not(:first-child) {
@@ -164,4 +193,23 @@ figcaption p {
     content: "🔺";
     
     font-size: calc(var(--totop-size));
+}
+
+footer {
+    text-align: center;
+    box-shadow: 0 -1px 6px #000;
+}
+
+footer div {
+    display: flex;
+    
+    width: 100%;
+}
+
+footer img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    margin: 0 6px;
+    
+    object-fit: contain;
 }

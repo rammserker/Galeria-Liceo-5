@@ -62,6 +62,7 @@ $imagenes  = getImages("");
 $timestamp = getLastTimestamp($imagenes);
 
 ?>
+<!doctype html>
 <html lang="es-UY">
     <head>
         <meta charset="utf-8">
@@ -69,8 +70,7 @@ $timestamp = getLastTimestamp($imagenes);
         <title>Jornada de Integración Liceo N⁰ 5</title>
 
         <link rel="stylesheet" href="css/galeria.css">
-
-        <script src="js/galeria.js" async></script>
+        <link rel="icon" type="image/x-icon" href="img/icon.ico">
     </head>
     <body>
         <header id="top">
@@ -90,6 +90,14 @@ foreach ($imagenes as $img)
 ?>
         </main>
         <footer>
+            <div>
+                <img src="img/logo_tip.png" alt="Logo de TI">
+                <img src="img/logo_utu.png" alt="Logo de UTU">
+                <img src="img/logo_utec.png" alt="Logo de UTEC">
+                <img src="img/logo_udelar.png" alt="Logo de UdelaR">
+            </div>
+            Copyright TIP 2022
+        </footer>
 <?php
 if (count($imagenes) > 1)
 {
@@ -98,7 +106,6 @@ if (count($imagenes) > 1)
 <?php
 }
 ?>
-            Copyright TIP 2022
-        </footer>
+    <script src="js/galeria.js" async></script>
     </body>
 </html>
