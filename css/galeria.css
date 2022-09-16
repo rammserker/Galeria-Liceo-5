@@ -1,0 +1,167 @@
+:root {
+    --body-margin: 1rem;
+}
+
+html, body, header, main,
+footer, figure, img, figcaption,
+p, .totop, form {
+    box-sizing: border-box;
+}
+
+html {
+    background:
+        linear-gradient(27deg, #151515 5px, transparent 5px) 0 5px,
+        linear-gradient(207deg, #151515 5px, transparent 5px) 10px 0px,
+        linear-gradient(27deg, #222 5px, transparent 5px) 0px 10px,
+        linear-gradient(207deg, #222 5px, transparent 5px) 10px 5px,
+        linear-gradient(90deg, #1b1b1b 10px, transparent 10px),
+        linear-gradient(#1d1d1d 25%, #1a1a1a 25%, #1a1a1a 50%, transparent 50%, transparent 75%, #242424 75%, #242424);
+    background-color: #131313;
+    background-size: 20px 20px;
+    
+    padding: var(--body-margin);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    
+    max-width: 100vmin;
+    min-height: calc(100vh - var(--body-margin) * 2);
+    margin: 0 auto;
+    border-radius: 6px;
+    
+    background: #fff;
+    box-shadow: 0 0 6px #000;
+    
+    font-family: sans-serif;
+}
+
+header, footer {
+    padding: .5rem 1rem;
+}
+
+h1 {
+    font-size: 4vmin;
+    text-align: center;
+    vertical-align: center;
+}
+
+h1::before {
+    content: "";
+    
+    display: inline-block;
+    width: 20vmin;
+    height: 20vmin;
+    float: left;
+    
+    background-image: url("../img/logo_liceo5.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    scroll-snap-type: y mandatory;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+    position: relative;
+    scroll-snap-align: start;
+    
+    margin: 0 0 1rem;
+    padding: 0;
+}
+
+figure.propia {
+    order: 0;
+}
+
+figure img {
+    flex-grow: 1;
+    aspect-ratio: 1 / 1;
+    
+    background-color: #666;
+    background-image: repeating-linear-gradient(45deg, transparent, transparent 35px, rgba(255,255,255,.2) 35px, rgba(255,255,255,.2) 70px);
+    
+    object-fit: contain;
+}
+
+figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: .2rem 1rem;
+    
+    background: #eee;
+}
+
+figcaption p {
+    margin: 0;
+    padding: 0;
+}
+
+.upload {
+    display: flex;
+    flex-direction: column;
+    
+    width: min-content;
+    margin: 1rem auto;
+    padding: 2rem;
+    
+    border: solid 3px #666;
+    border-radius: 6px;
+}
+
+.upload input:not(:first-child) {
+    margin-top: 1rem;
+}
+
+/*
+.like [type="submit"] {
+    --like-size: 50px;
+    
+    width: var(--like-size);
+    height: var(--like-size);
+    border-radius: 50%;
+    
+    text-align: left;
+}
+*/
+
+.like [type="submit"]::before {
+    content: "🤍";
+}
+
+.totop {
+    --totop-size: 50px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--totop-size);
+    height: var(--totop-size);
+    border-radius: 50%;
+    overflow: hidden;
+    
+    position: fixed;
+    bottom: 2vmin;
+    right: 2vmin;
+    
+    background: #ccc;
+    border: solid 3px #666;
+    box-shadow: 0 0 6px #000;
+    text-decoration: none;
+}
+
+.totop::before {
+    content: "🔺";
+    
+    font-size: calc(var(--totop-size));
+}

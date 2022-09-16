@@ -1,0 +1,18 @@
+# Proteger el acceso a archivos sensibles
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files .replit.orig>
+Order allow,deny
+Deny from all
+</Files>
+
+<Files php.ini>
+Order allow,deny
+Deny from all
+</Files>
+
+# Prohibir el indexado del directorio
+Options -Indexes
