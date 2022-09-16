@@ -79,7 +79,7 @@ $timestamp = getLastTimestamp($imagenes);
         <form action="" method="post" autocomplete="off" enctype="multipart/form-data" class="upload">
             <input type="file" name="uploadfoto" title="Elegí una foto para agregar" required>
             <input type="hidden" name="action" value="upload">
-            <input type="submit" value="Subir imagen">
+            <input type="submit" value="<?php if (hasImage()) echo 'Cambiar imagen'; else echo 'Subir imagen'; ?>">
         </form>
         <main>
 <?php

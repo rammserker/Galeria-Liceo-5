@@ -132,6 +132,12 @@ function uploadImage ()
     return $uploadOk == 1;
 }
 
+function hasImage ()
+{
+    $usrid = getUserId();
+    return file_exists("img/galeria/${usrid}.likes");
+}
+
 ///// Métodos de likes
 function getLikes ($imgid)
 {
@@ -287,7 +293,7 @@ function imageTemplate ($img)
             <input
                 type="submit"
                  <?php if ($img['id'] == $usrid) echo "disabled"?>
-                value="<?=$img['liked'] ? "No me gusta" : "Me gusta"?>">
+                value="🤍">
         </form>
         <p><?=$img['likes']?> Me gusta</p>
     </figcaption>

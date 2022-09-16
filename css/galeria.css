@@ -131,6 +131,8 @@ figcaption {
 figcaption p {
     margin: 0;
     padding: 0;
+    
+    font-weight: bold;
 }
 
 .upload {
@@ -152,7 +154,6 @@ figcaption p {
     margin-top: 1rem;
 }
 
-/*
 .like [type="submit"] {
     --like-size: 50px;
     
@@ -160,12 +161,21 @@ figcaption p {
     height: var(--like-size);
     border-radius: 50%;
     
-    text-align: left;
+    text-align: center;
+    font-size: calc(var(--like-size) / 2);
+    background: gray;
+    
+    cursor: pointer;
+    
+    transition: transform .6s;
 }
-*/
 
-.like [type="submit"]::before {
-    content: "🤍";
+.liked .like [type="submit"] {
+    background: firebrick;
+}
+
+.like [type="submit"]:hover {
+    transform: scale(1.2);
 }
 
 .totop {
