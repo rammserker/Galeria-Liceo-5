@@ -4,7 +4,7 @@
 
 html, body, header, main,
 footer, figure, img, figcaption,
-p, .totop, form {
+p, .totop, form, div {
     box-sizing: border-box;
 }
 
@@ -71,21 +71,6 @@ h1 {
     text-shadow: 0 0 4px #fff;
 }
 
-/*
-h1::before {
-    content: "";
-    
-    display: inline-block;
-    width: 20vmin;
-    height: 20vmin;
-    float: left;
-    
-    background-image: url("../img/logo_liceo5.png");
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-*/
-
 main {
     display: flex;
     flex-direction: column;
@@ -144,7 +129,7 @@ figcaption p {
     margin: 1rem auto;
     padding: 2rem;
     
-    border: solid 3px #0301d9;
+    border: solid 3px #666;
     border-radius: 6px;
     background: linear-gradient(-45deg, #ddd, #eee);
     box-shadow: 0 0 6px red;
@@ -164,10 +149,11 @@ figcaption p {
     text-align: center;
     font-size: calc(var(--like-size) / 2);
     background: gray;
+    border: solid 2px #666;
     
     cursor: pointer;
     
-    transition: transform .6s;
+    transition: all .6s;
 }
 
 .liked .like [type="submit"] {
@@ -176,6 +162,7 @@ figcaption p {
 
 .like [type="submit"]:hover {
     transform: scale(1.2);
+    background: firebrick;
 }
 
 .totop {
@@ -208,18 +195,30 @@ figcaption p {
 footer {
     text-align: center;
     box-shadow: 0 -1px 6px #000;
+    font-weight: bold;
+    color: #444;
 }
 
 footer div {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 60px;
+    gap: .6rem;
     
     width: 100%;
+    margin-bottom: 1rem;
 }
 
 footer img {
     width: 100%;
+    max-height: 100%;
     aspect-ratio: 1 / 1;
     margin: 0 6px;
+    justify-self: center;
     
     object-fit: contain;
+}
+
+footer img:nth-of-type(odd) {
+    grid-row: span 2;
 }

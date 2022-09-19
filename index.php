@@ -91,10 +91,10 @@ foreach ($imagenes as $img)
         </main>
         <footer>
             <div>
-                <img src="img/logo_tip.png" alt="Logo de TI">
-                <img src="img/logo_utu.png" alt="Logo de UTU">
                 <img src="img/logo_utec.png" alt="Logo de UTEC">
+                <img src="img/logo_utu.png" alt="Logo de UTU">
                 <img src="img/logo_udelar.png" alt="Logo de UdelaR">
+                <img src="img/logo_tip.png" alt="Logo de TI">
             </div>
             Copyright TIP 2022
         </footer>
